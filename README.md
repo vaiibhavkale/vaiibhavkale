@@ -2,9 +2,9 @@
 -  👋 Hi, I’m Vaibhav
 - 📫 How to reach me ... vaiibhavkale@gmail.com
 
-[![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=yushi1007)](https://github.com/vaiibhavkale)
+[![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=vaiibhavkale)](https://github.com/vaiibhavkale)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yushi1007&layout=compact)](https://github.com/vaiibhavkale)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=vaiibhavkale&layout=compact)](https://github.com/vaiibhavkale)
 
 <!---
 vaiibhavkale/vaiibhavkale is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
