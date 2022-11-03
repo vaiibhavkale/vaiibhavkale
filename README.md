@@ -1,5 +1,5 @@
 - HELLO WORLD!!
--👋Hi, Vaibhav here
+- 👋 Hi, Vaibhav here
 
 <a href="https://www.linkedin.com/in/vaibhav-kale-914960215/"><img align="left" src="https://raw.githubusercontent.com/yushi1007/yushi1007/main/images/linkedin.svg" alt="Yu Shi | LinkedIn" width="21px"/></a>
 <a href="https://instagram.com/vaiibhavkale"><img align="left" src="https://raw.githubusercontent.com/yushi1007/yushi1007/main/images/instagram.svg" alt="Yu Shi | Instagram" width="21px"/></a>
