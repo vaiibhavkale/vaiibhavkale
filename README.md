@@ -12,7 +12,7 @@ Hiii there, I'm Vaibhav</a> 👋
 </br>
 
 ## Visitors Count
-![Visitor Count](https://profile-counter.glitch.me/{YOUR USER}/count.svg)
+![Visitor Count](https://profile-counter.glitch.me/vaiibhavkale/count.svg)
 
 ## 💼 Technical Skills
 
