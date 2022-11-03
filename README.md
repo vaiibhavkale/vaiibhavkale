@@ -12,7 +12,6 @@ Hiii there, I'm Vaibhav</a> 👋
 <a href="https://instagram.com/vaiibhavkale"><img align="left" src="https://raw.githubusercontent.com/yushi1007/yushi1007/main/images/instagram.svg" alt="Yu Shi | Instagram" width="21px"/></a>
 </br>
 
-</br>
 
 ## 💼 Technical Skills
 
