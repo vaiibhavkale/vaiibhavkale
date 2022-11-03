@@ -1,6 +1,5 @@
 - HELLO WORLD!!
--  👋 Hi, I’m Vaibhav
-- 📫 How to reach me ... vaiibhavkale@gmail.com
+-  👋 Hi, Vaibhav here
 
 [![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=vaiibhavkale)](https://github.com/vaiibhavkale)
 
