@@ -40,8 +40,6 @@ Hiii there, I'm Vaibhav</a> 👋
 ## 👤 Visitors Count
 ![Visitor Count](https://profile-counter.glitch.me/vaiibhavkale/count.svg)
 
-##
-
 <!---
 vaiibhavkale/vaiibhavkale is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
