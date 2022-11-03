@@ -35,6 +35,8 @@ Hiii there, I'm Vaibhav</a> 👋
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=vaiibhavkale&layout=compact)](https://github.com/vaiibhavkale)
 
+<br>
+
 ## 👤 Visitors Count
 ![Visitor Count](https://profile-counter.glitch.me/vaiibhavkale/count.svg)
 
