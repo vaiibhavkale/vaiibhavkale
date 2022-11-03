@@ -16,7 +16,7 @@ Hiii there, I'm Vaibhav</a> 👋
 
 ## 💼 Technical Skills
 
-![](https://img.shields.io/badge/Code-Java-red)
+![](https://img.shields.io/badge/Code-Java-informational?stype=flag@logo=Java&color=E34F26)
 ![](https://img.shields.io/badge/Code-Python-brightgreen)
 ![](https://img.shields.io/badge/Code-React%20JS-blue)
 ![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=JavaScript&color=F7DF1E)
