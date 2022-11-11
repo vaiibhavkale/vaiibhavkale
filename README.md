@@ -38,6 +38,10 @@ Hiii there, I'm Vaibhav</a> 👋
 
 <br>
 
+[![Suhail's github activity graph](https://activity-graph.herokuapp.com/graph?username=vaiibhavkale&theme=react-dark)](https://github.com/vaiibhavkale)
+
+<br>
+
 ## 👤 Visitors Count
 ![Visitor Count](https://profile-counter.glitch.me/vaiibhavkale/count.svg)
 
