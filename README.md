@@ -34,11 +34,8 @@ Hiii there, I'm Vaibhav</a> 👋
 
 [![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=vaiibhavkale&show_icons=true&theme=react)](https://github.com/vaiibhavkale)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=vaiibhavkale&layout=compact)](https://github.com/vaiibhavkale)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=vaiibhavkale&layout=compact&theme=react)](https://github.com/vaiibhavkale)
 
-<a href="#suhailkakar-title">
-  <img src="https://github-readme-stats.vercel.app/api?username=vaiibhavkale&show_icons=true&theme=react&count_private=true&include_all_commits=true" alt="Vaibhav Kale" align="left" />
-</a>
 
 <br>
 
