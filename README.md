@@ -32,7 +32,7 @@ Hiii there, I'm Vaibhav</a> 👋
 
 ## 📈 GitHub Stats
 
-[![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=vaiibhavkale)](https://github.com/vaiibhavkale)
+[![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=vaiibhavkale&show_icons=true&theme=react)](https://github.com/vaiibhavkale)
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=vaiibhavkale&layout=compact)](https://github.com/vaiibhavkale)
 
