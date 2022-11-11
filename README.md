@@ -36,6 +36,8 @@ Hiii there, I'm Vaibhav</a> 👋
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=vaiibhavkale&layout=compact)](https://github.com/vaiibhavkale)
 
+<img src="https://github-readme-stats.vercel.app/api?username=vaiibhavkale&show_icons=true&theme=react&count_private=true&include_all_commits=true" alt="Vaibhav Kale"/>
+
 <br>
 
 [![Suhail's github activity graph](https://activity-graph.herokuapp.com/graph?username=vaiibhavkale&theme=react-dark)](https://github.com/vaiibhavkale)
