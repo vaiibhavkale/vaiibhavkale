@@ -39,7 +39,7 @@ Hiii there, I'm Vaibhav</a> 👋
 
 <br>
 
-[![Vaibhav's github activity graph](https://activity-graph.herokuapp.com/graph?username=vaiibhavkale&theme=react-dark)](https://github.com/vaiibhavkale)
+<!-- [![Vaibhav's github activity graph](https://activity-graph.herokuapp.com/graph?username=vaiibhavkale&theme=react-dark)](https://github.com/vaiibhavkale)
 
 <br>
 
