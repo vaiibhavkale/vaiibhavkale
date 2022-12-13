@@ -15,7 +15,7 @@ Hiii there, I'm Vaibhav</a> 👋
 
 
 <div align="center" >
-  <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="400" height="300" margin="10px" />
+  <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="500" height="300" margin="10px" />
 </div>
 
 </br>
