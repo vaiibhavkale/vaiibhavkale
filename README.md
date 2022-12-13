@@ -12,6 +12,7 @@ Hiii there, I'm Vaibhav</a> 👋
 <a href="https://twitter.com/vaiibhavkale"><img align="left" src="https://github.com/vaiibhavkale/vaiibhavkale/blob/main/images/twitter.png" alt="Yu Shi | Twitter" width="23px"/></a>
 <a href="https://instagram.com/vaiibhavkale"><img align="left" src="https://raw.githubusercontent.com/yushi1007/yushi1007/main/images/instagram.svg" alt="Yu Shi | Instagram" width="21px"/></a>
 </br>
+</br>
 
 <table><tr><td valign="top" width="50%">
  <div>
@@ -23,6 +24,7 @@ Hiii there, I'm Vaibhav</a> 👋
 ![](https://img.shields.io/badge/Code-React%20JS-blue)
 ![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=JavaScript&color=F7DF1E)
 ![](https://img.shields.io/badge/Code-HTML5-informational?style=flat&logo=HTML5&color=E34F26)
+![](https://img.shields.io/badge/Storage-Firebase-orange)
    
    </td><td valign="top" width="30%">
   </div>
@@ -33,11 +35,6 @@ Hiii there, I'm Vaibhav</a> 👋
   
   </td></tr></table>  
 <br/>
-
-
-![](https://img.shields.io/badge/Storage-Firebase-orange)
-
-</br>
 
 
 ## 📈 GitHub Stats
