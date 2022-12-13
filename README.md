@@ -13,10 +13,8 @@ Hiii there, I'm Vaibhav</a> 👋
 <a href="https://instagram.com/vaiibhavkale"><img align="left" src="https://raw.githubusercontent.com/yushi1007/yushi1007/main/images/instagram.svg" alt="Yu Shi | Instagram" width="21px"/></a>
 </br>
 
-<div align="center" >
-  <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="400" height="300" margin="10px" />
-</div>
-
+<table><tr><td valign="top" width="50%">
+ <div>
 
 ## 💼 Technical Skills
 
@@ -25,9 +23,17 @@ Hiii there, I'm Vaibhav</a> 👋
 ![](https://img.shields.io/badge/Code-React%20JS-blue)
 ![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=JavaScript&color=F7DF1E)
 ![](https://img.shields.io/badge/Code-HTML5-informational?style=flat&logo=HTML5&color=E34F26)
+   
+   </td><td valign="top" width="30%">
+  </div>
+   
+<div align="center" >
+  <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="400" height="300" margin="10px" />
+</div>
+  
+  </td></tr></table>  
+<br/>
 
-
-</br>
 
 ![](https://img.shields.io/badge/Storage-Firebase-orange)
 
