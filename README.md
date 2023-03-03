@@ -22,7 +22,6 @@ Hiii there, I'm Vaibhav</a> 👋
 
 ## 💼 Technical Skills
 
-![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
 ![](https://img.shields.io/badge/Code-Java-red)
 ![](https://img.shields.io/badge/Code-Python-brightgreen)
 ![](https://img.shields.io/badge/Code-React%20JS-blue)
