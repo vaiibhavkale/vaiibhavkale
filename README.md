@@ -31,8 +31,6 @@ motto: "Agar ship nahi hua, toh build nahi hua."
   <img src="https://skillicons.dev/icons?i=java,spring,python,fastapi,ts,react,angular,flutter&theme=dark" />
   <br/>
   <img src="https://skillicons.dev/icons?i=aws,docker,nginx,github,githubactions,postgres,mongodb,dynamodb&theme=dark" />
-  <br/>
-  <img src="https://skillicons.dev/icons?i=mqtt,arduino,tailwind,selenium,git,linux,vscode,figma&theme=dark" />
 </p>
 
 <details>
