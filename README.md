@@ -22,7 +22,7 @@
 ⚡ Fun fact: <strong>I freelanced for years before my first full-time role</strong> <br />
 👁️ Looking for <strong>open source contribution</strong>
 
-<details>
+<details open>
   <summary><b>🛠 Tech Stack</b></summary><br>
   <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 16px;">
     <div style="margin-bottom: 10px;">
