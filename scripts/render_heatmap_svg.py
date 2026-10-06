@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 """
-Render data/contributions.json as a terminal-window contribution heatmap.
-
-Rounded cells reveal once on a diagonal cascade (CSS keyframes inside the
-SVG). A legend and stats footer use the scraped totals. Matches the layout
-from the animated profile README blog post.
+Render data/contributions.json as the flat contribution graph used on the
+animated profile README: months, day labels, green cells that pop in once,
+and the yearly total underneath. No year list and no terminal frame.
 
     python scripts/render_heatmap_svg.py
 """
@@ -16,57 +14,28 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 IN_PATH = os.path.join(HERE, "..", "data", "contributions.json")
 OUT_PATH = os.path.join(HERE, "..", "contrib-heatmap.svg")
 
-# GitHub-ish green ramp. Level 5 is a brighter neon top end.
-PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
+PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
 
-CELL = 12
+CELL = 13
 GAP = 3
 STEP = CELL + GAP
-PAD = 22
-LEFT_LABEL_W = 30
-TOP_LABEL_H = 20
-TITLEBAR_H = 30
-
-BG = "#0d1117"
-BG2 = "#161b22"
-FRAME = "#30363d"
-MUTED = "#7d8590"
-TEXT = "#e6edf3"
-GREEN = "#3fb950"
-FONT = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
-
-COL_T = 0.018
-ROW_T = 0.045
-CELL_DUR = 0.42
-
-PROMPT = "vaibhav@github: ~/contributions --graph"
-
-
-def level_for(count):
-    if count == 0:
-        return 0
-    if count <= 5:
-        return 1
-    if count <= 15:
-        return 2
-    if count <= 30:
-        return 3
-    if count <= 50:
-        return 4
-    return 5
+LEFT = 34
+TOP = 24
+CANVAS_H = 158
+FONT = "-apple-system, Segoe UI, Helvetica, Arial, sans-serif"
 
 
 def build_grid(days):
     first = datetime.date.fromisoformat(days[0]["date"])
-    lead_pad = (first.weekday() + 1) % 7
+    lead = (first.weekday() + 1) % 7
     grid = []
-    column = [None] * lead_pad
+    column = [None] * lead
     for day in days:
         date = datetime.date.fromisoformat(day["date"])
         weekday = (date.weekday() + 1) % 7
         while len(column) < weekday:
             column.append(None)
-        level = level_for(day["count"])
+        level = max(0, min(len(PALETTE) - 1, int(day["level"])))
         column.append((day["date"], day["count"], level))
         if len(column) == 7:
             grid.append(column)
@@ -100,108 +69,50 @@ def month_labels(grid):
 
 def render(data):
     grid = build_grid(data["days"])
-    n_cols = len(grid)
-    art_w = n_cols * STEP
-    art_h = 7 * STEP
-    canvas_w = PAD + LEFT_LABEL_W + art_w + PAD
-    stats_h = 88
-    canvas_h = TITLEBAR_H + TOP_LABEL_H + art_h + stats_h + PAD
-
-    font = f'font-family="{FONT}"'
-    css = (
-        "@keyframes cell { from { opacity: 0; transform: translateY(-6px); } "
-        f"to {{ opacity: 1; transform: translateY(0); }} }}"
-        f".c {{ opacity: 0; animation: cell {CELL_DUR:.2f}s cubic-bezier(.2,.8,.2,1) both; }}"
-        "@media (prefers-reduced-motion: reduce) { .c { opacity: 1; animation: none; } }"
-    )
-
+    canvas_w = LEFT + len(grid) * STEP + 6
+    total = data["total_contributions"]
     parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{canvas_w}" height="{canvas_h}" '
-        f'viewBox="0 0 {canvas_w} {canvas_h}" role="img" '
-        f'aria-label="GitHub contribution graph">',
-        f"<style>{css}</style>",
-        f'<rect width="{canvas_w}" height="{canvas_h}" rx="12" fill="{BG}" stroke="{FRAME}"/>',
-        f'<rect width="{canvas_w}" height="{TITLEBAR_H}" rx="12" fill="{BG2}"/>',
-        f'<rect y="{TITLEBAR_H - 12}" width="{canvas_w}" height="12" fill="{BG2}"/>',
-        f'<line x1="0" y1="{TITLEBAR_H}" x2="{canvas_w}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>',
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{canvas_w}" height="{CANVAS_H}" '
+        f'viewBox="0 0 {canvas_w} {CANVAS_H}" font-family="{FONT}" role="img" '
+        f'aria-label="{total:,} contributions in the last year">',
+        "<style>",
+        "text.lbl { fill: #7d8590; font-size: 13px; font-weight: 600; }",
+        "text.total { fill: #e6edf3; font-size: 15px; font-weight: 700; }",
+        ".c { transform-box: fill-box; transform-origin: center; opacity: 0; animation: pop 0.55s ease-out both; }",
+        ".g { animation: pop 0.55s ease-out both, flash 0.7s ease-out both; }",
+        "@keyframes pop { 0% { opacity: 0; transform: scale(0.2); } 60% { opacity: 1; transform: scale(1.1); } 100% { opacity: 1; transform: scale(1); } }",
+        "@keyframes flash { 0% { filter: brightness(2.4); } 45% { filter: brightness(2.4); } 100% { filter: brightness(1); } }",
+        "@media (prefers-reduced-motion: reduce) { .c, .g { opacity: 1; animation: none; } }",
+        "</style>",
+        f'<rect width="{canvas_w}" height="{CANVAS_H}" fill="none"/>',
     ]
-    for index, color in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
-        parts.append(f'<circle cx="{16 + index * 16}" cy="16" r="5" fill="{color}"/>')
-    parts.append(
-        f'<text x="78" y="21" fill="{MUTED}" {font} font-size="13">{PROMPT}</text>'
-    )
-
-    grid_top = TITLEBAR_H + TOP_LABEL_H
-    grid_left = PAD + LEFT_LABEL_W
 
     for col_index, label in month_labels(grid):
-        x = grid_left + col_index * STEP
-        parts.append(
-            f'<text x="{x}" y="{TITLEBAR_H + 14}" fill="{MUTED}" {font} font-size="11">{label}</text>'
-        )
+        x = LEFT + col_index * STEP
+        parts.append(f'<text class="lbl" x="{x}" y="16">{label}</text>')
 
     for row_index, name in [(1, "Mon"), (3, "Wed"), (5, "Fri")]:
-        y = grid_top + row_index * STEP + CELL * 0.78
-        parts.append(f'<text x="{PAD}" y="{y:.1f}" fill="{MUTED}" {font} font-size="10">{name}</text>')
+        y = TOP + row_index * STEP + 11
+        parts.append(f'<text class="lbl" x="2" y="{y}">{name}</text>')
 
     for col_index, column in enumerate(grid):
-        x = grid_left + col_index * STEP
+        x = LEFT + col_index * STEP
         for row_index, cell in enumerate(column):
             if cell is None:
                 continue
             date_s, count, level = cell
-            y = grid_top + row_index * STEP
-            delay = col_index * COL_T + row_index * ROW_T
+            y = TOP + row_index * STEP
+            delay = (col_index * 7 + row_index) * 0.004
+            klass = "c g" if level >= 4 else "c"
             word = "contribution" if count == 1 else "contributions"
             parts.append(
-                f'<rect class="c" style="animation-delay:{delay:.3f}s" '
-                f'x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" '
-                f'fill="{PALETTE[level]}">'
-                f'<title>{date_s}: {count} {word}</title></rect>'
+                f'<rect class="{klass}" x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2.5" '
+                f'fill="{PALETTE[level]}" style="animation-delay:{delay:.3f}s">'
+                f"<title>{count} {word} on {date_s}</title></rect>"
             )
 
-    leg_y = grid_top + art_h + 6
-    leg_x = canvas_w - PAD - (len(PALETTE) * (CELL + 3) + 70)
-    parts.append(f'<text x="{leg_x}" y="{leg_y + 10}" fill="{MUTED}" {font} font-size="11">Less</text>')
-    swatch_x = leg_x + 36
-    for level, color in enumerate(PALETTE):
-        parts.append(
-            f'<rect x="{swatch_x + level * (CELL + 3)}" y="{leg_y}" '
-            f'width="{CELL}" height="{CELL}" rx="2" fill="{color}"/>'
-        )
     parts.append(
-        f'<text x="{swatch_x + len(PALETTE) * (CELL + 3) + 4}" y="{leg_y + 10}" '
-        f'fill="{MUTED}" {font} font-size="11">More</text>'
-    )
-
-    sep_y = leg_y + CELL + 14
-    parts.append(f'<line x1="{PAD}" y1="{sep_y}" x2="{canvas_w - PAD}" y2="{sep_y}" stroke="{FRAME}"/>')
-
-    current = data["current_streak"]["length"]
-    longest = data["longest_streak"]["length"]
-    total = data["total_contributions"]
-    best = data["best_day"]
-    span = data["range"]
-    line_y = sep_y + 24
-    parts.append(
-        f'<text x="{PAD}" y="{line_y}" {font} font-size="14">'
-        f'<tspan fill="{GREEN}" font-weight="700">{total:,}</tspan>'
-        f'<tspan fill="{TEXT}"> contributions in the last year</tspan></text>'
-    )
-    parts.append(
-        f'<text x="{canvas_w - PAD}" y="{line_y}" fill="{MUTED}" {font} font-size="12" text-anchor="end">'
-        f'{span["start"]} to {span["end"]}</text>'
-    )
-    line_y += 24
-    parts.append(
-        f'<text x="{PAD}" y="{line_y}" {font} font-size="13">'
-        f'<tspan fill="{MUTED}">current streak </tspan>'
-        f'<tspan fill="{GREEN}" font-weight="700">{current} days</tspan>'
-        f'<tspan fill="{MUTED}">   ·   longest </tspan>'
-        f'<tspan fill="{TEXT}" font-weight="700">{longest} days</tspan>'
-        f'<tspan fill="{MUTED}">   ·   best day </tspan>'
-        f'<tspan fill="{TEXT}">{best["count"]} on {best["date"]}</tspan>'
-        f"</text>"
+        f'<text class="total" x="{LEFT}" y="152">{total:,} contributions in the last year</text>'
     )
     parts.append("</svg>")
     return "".join(parts)
