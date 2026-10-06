@@ -2,7 +2,7 @@
 
 <h3><code>vaibhav@github ~ $ ./contributions.sh</code></h3>
 
-<img src="./contrib-heatmap.svg" width="866" alt="Contribution heatmap" />
+<img src="./contrib-heatmap.svg" width="860" alt="Contribution heatmap" />
 
 <br><br>
 
