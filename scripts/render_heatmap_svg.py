@@ -33,7 +33,7 @@ FRAME = "#3d444d"
 MUTED = "#9198a1"
 TEXT = "#e6edf3"
 ACCENT = "#1f6feb"
-FONT = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
+FONT = "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
 
 
 def build_grid(days):

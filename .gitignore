@@ -2,5 +2,10 @@ __pycache__/
 .venv/
 data/contrib.html
 data/crop-*.png
+data/ascii-*.png
 data/ascii-preview.png
+data/face-*.png
+data/edges.png
+data/skin.png
+data/heatmap-preview.png
 data/preview.html
