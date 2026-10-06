@@ -1,0 +1,6 @@
+__pycache__/
+.venv/
+data/contrib.html
+data/crop-*.png
+data/ascii-preview.png
+data/preview.html
