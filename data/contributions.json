@@ -1,22 +1,22 @@
 {
   "username": "vaiibhavkale",
-  "generated_at": "2026-11-14T13:34:39Z",
+  "generated_at": "2026-11-15T13:58:03Z",
   "range": {
-    "start": "2025-11-09",
-    "end": "2026-11-14"
+    "start": "2025-11-16",
+    "end": "2026-11-15"
   },
-  "total_contributions": 11220,
-  "active_days": 371,
-  "avg_per_active_day": 30.2,
+  "total_contributions": 11045,
+  "active_days": 365,
+  "avg_per_active_day": 30.3,
   "current_streak": {
-    "length": 371,
-    "start": "2025-11-09",
-    "end": "2026-11-14"
+    "length": 365,
+    "start": "2025-11-16",
+    "end": "2026-11-15"
   },
   "longest_streak": {
-    "length": 371,
-    "start": "2025-11-09",
-    "end": "2026-11-14"
+    "length": 365,
+    "start": "2025-11-16",
+    "end": "2026-11-15"
   },
   "best_day": {
     "date": "2026-08-31",
@@ -25,7 +25,7 @@
   "monthly": [
     {
       "month": "2025-11",
-      "total": 621
+      "total": 441
     },
     {
       "month": "2025-12",
@@ -73,45 +73,10 @@
     },
     {
       "month": "2026-11",
-      "total": 54
+      "total": 59
     }
   ],
   "days": [
-    {
-      "date": "2025-11-09",
-      "count": 30,
-      "level": 2
-    },
-    {
-      "date": "2025-11-10",
-      "count": 30,
-      "level": 2
-    },
-    {
-      "date": "2025-11-11",
-      "count": 30,
-      "level": 2
-    },
-    {
-      "date": "2025-11-12",
-      "count": 20,
-      "level": 2
-    },
-    {
-      "date": "2025-11-13",
-      "count": 20,
-      "level": 2
-    },
-    {
-      "date": "2025-11-14",
-      "count": 40,
-      "level": 3
-    },
-    {
-      "date": "2025-11-15",
-      "count": 10,
-      "level": 1
-    },
     {
       "date": "2025-11-16",
       "count": 20,
@@ -1929,7 +1894,12 @@
     },
     {
       "date": "2026-11-14",
-      "count": 10,
+      "count": 13,
+      "level": 1
+    },
+    {
+      "date": "2026-11-15",
+      "count": 2,
       "level": 1
     }
   ]
